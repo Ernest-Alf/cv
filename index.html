@@ -1,180 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio y página personal de José Ernesto Alfaro Méndez, analista de datos y educador.">
-    <title>José Ernesto Alfaro | Página personal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="description" content="CV de José Ernesto Alfaro — Analista de datos y educador." />
+  <title>José Ernesto Alfaro | CV</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
-    <!-- Estilos básicos sencillos para mantener todo en un solo archivo -->
-    <style>
-        :root {
-            --clr-primary: #0077b6;
-            --clr-light: #f8f9fa;
-            --clr-dark: #212529;
-        }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            background: var(--clr-light);
-            color: var(--clr-dark);
-        }
-        img { max-width: 100%; display: block; }
-
-        /* ─────────────  Layout  ───────────── */
-        header {
-            background: var(--clr-primary);
-            color: #fff;
-            padding: 2rem 1rem;
-        }
-        .header-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-        @media (min-width: 768px) {
-            .header-container { flex-direction: row; justify-content: space-between; }
-        }
-        .avatar {
-            border-radius: 12px;
-            width: 180px;
-            height: 135px;
-            object-fit: cover;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1rem;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        nav a:hover { opacity: .85; }
-
-        main {
-            max-width: 960px;
-            margin-inline: auto;
-            padding: 2rem 1rem;
-        }
-        section { margin-bottom: 2rem; }
-        h2 { margin-bottom: .75rem; color: var(--clr-primary); }
-        ul { margin-left: 1.25rem; margin-bottom: 1rem; }
-
-        /* ────────────  Tabla experiencia  ──────────── */
-        table { width: 100%; border-collapse: collapse; }
-        thead { background: var(--clr-primary); color: #fff; }
-        th, td { padding: .5rem; text-align: left; }
-        tbody tr:nth-child(even) { background: #e7f1f5; }
-
-        /* ────────────  Habilidades ──────────── */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: .5rem 1.5rem;
-        }
-        .skill {
-            display: flex;
-            justify-content: space-between;
-            font-weight: 600;
-        }
-
-        footer {
-            background: var(--clr-dark);
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-            font-size: .875rem;
-        }
-        footer a { color: var(--clr-primary); }
-    </style>
 </head>
 <body>
+  <header>
+    <img src="assets/img/profile.jpg" alt="Foto de José Ernesto" class="avatar" />
+    <h1>José Ernesto Alfaro Méndez</h1>
+    <p>Analista de datos · Educador · Jefe de Evaluación (SEG)</p>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="pages/projects.html">Proyectos</a>
+      <a href="pages/about.html">Sobre mí</a>
+      <a href="pages/contact.html">Contacto</a>
+    </nav>
+  </header>
 
-    <!-- ╭─╴ Encabezado / Hero ╶─╮ -->
-    <header>
-        <div class="header-container">
-            <figure>
-                <img class="avatar" src="https://images7.alphacoders.com/108/1086801.jpg" alt="Ilustración de un superhéroe" />
-            </figure>
-            <div>
-                <h1>José Ernesto<br>Alfaro Méndez</h1>
-                <p><em>Jefe del Departamento de Evaluación en la <a href="https://www.seg.guanajuato.gob.mx/SitePages/Home.aspx" target="_blank" rel="noopener">Secretaría de Educación de Guanajuato</a></em></p>
-                <p>Analista de datos con formación docente y administrativa, amante de la tecnología, las artes marciales, los videojuegos, la música y la ciencia. Fan del café y de la lectura (¡aunque nunca es suficiente!).</p>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="hobbies.html">Hobbies</a></li>
-                        <li><a href="contact.html">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+  <main>
+    <section id="skills">
+      <h2>Habilidades</h2>
+      <ul>
+        <li>Python · Pandas · VBA</li>
+        <li>Office 365 · Power BI</li>
+        <li>SQL · Git · Linux</li>
+      </ul>
+    </section>
 
-    <!-- ╭─╴ Contenido principal ╶─╮ -->
-    <main>
-        <!-- Formación -->
-        <section id="education">
-            <h2>Formación académica</h2>
-            <ul>
-                <li>Licenciatura en Educación — <a href="https://upn.mx/" target="_blank" rel="noopener">Universidad Pedagógica Nacional</a></li>
-                <li>Maestría en Administración — Universidad del Centro del Bajío</li>
-                <li>Cursos de desarrollo web y análisis de datos (Udemy, Platzi, etc.)</li>
-            </ul>
-        </section>
+    <section id="experience">
+      <h2>Experiencia</h2>
+      <article>
+        <h3>Jefe de Planeación y Evaluación — SEG Guanajuato</h3>
+        <time>2007 – presente</time>
+        <p>Gestión de indicadores educativos, coordinación de estudios y encuestas.</p>
+      </article>
+      <article>
+        <h3>Docente de educación básica</h3>
+        <time>2004 – 2007</time>
+        <p>Docencia en distintos grados y escuelas.</p>
+      </article>
+    </section>
 
-        <!-- Experiencia -->
-        <section id="experience">
-            <h2>Experiencia laboral</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Periodo</th>
-                        <th>Puesto</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2004 – 2007</td>
-                        <td>Docente de educación básica</td>
-                    </tr>
-                    <tr>
-                        <td>2007 – Presente</td>
-                        <td>Jefe de Planeación y Evaluación — SEG Guanajuato</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+    <section id="education">
+      <h2>Educación</h2>
+      <ul>
+        <li>Maestría en Administración — U. Centro del Bajío</li>
+        <li>Licenciatura en Educación — UPN</li>
+        <li>Certificaciones y cursos (Udemy, Platzi, etc.)</li>
+      </ul>
+    </section>
+  </main>
 
-        <!-- Habilidades -->
-        <section id="skills">
-            <h2>Habilidades</h2>
-            <div class="skills-grid">
-                <p class="skill">Python <span>★★★☆☆</span></p>
-                <p class="skill">Office 365 <span>★★★★☆</span></p>
-                <p class="skill">VBA <span>★★★★☆</span></p>
-                <p class="skill">C++ <span>★★★☆☆</span></p>
-                <p class="skill">JavaScript <span>★☆☆☆☆</span></p>
-                <p class="skill">Inglés <span>★★★★☆</span></p>
-            </div>
-        </section>
-    </main>
-
-    <!-- ╭─╴ Pie de página ╶─╮ -->
-    <footer>
-        © 2025 José Ernesto Alfaro — Diseñado con 💙 y café | <a href="contact.html">Contáctame</a>
-    </footer>
+  <footer>
+    © 2025 José Ernesto · <a href="pages/contact.html">Contáctame</a>
+  </footer>
 </body>
 </html>
