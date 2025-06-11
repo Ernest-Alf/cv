@@ -1,17 +1,127 @@
-<!DOCTYPE html><html lang="es"><head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Proyectos | José Ernesto</title>
-  <link rel="stylesheet" href="../assets/css/style.css"><!-- o mantén el <style> inline -->
-</head><body>
-  <!-- header copiado aquí -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Proyectos destacados de José Ernesto Alfaro." />
+  <title>Proyectos | José Ernesto Alfaro</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- ✨ Estilos: reutilizamos el mismo esquema del index -->
+  <style>
+    :root {
+      --clr-accent: #0ea5e9;
+      --clr-accent-dark: #0d9488;
+      --clr-bg: #f8fafc;
+      --clr-text: #1e293b;
+      --clr-muted: #64748b;
+      --ff-base: 'Inter', sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--ff-base);background:var(--clr-bg);color:var(--clr-text);line-height:1.6;}
+    a{color:var(--clr-accent);text-decoration:none;}
+    img{max-width:100%;display:block;border-radius:8px;}
+
+    header{background:var(--clr-accent);color:#fff;padding:2rem 1rem;}
+    .header__inner{max-width:1100px;margin-inline:auto;display:flex;flex-direction:column;align-items:center;gap:1.5rem;}
+    @media(min-width:768px){.header__inner{flex-direction:row;justify-content:space-between;}}
+    .avatar{width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid #fff2;}
+    nav ul{list-style:none;display:flex;flex-wrap:wrap;gap:1rem 1.5rem;justify-content:center;}
+    nav a{color:#fff;font-weight:600;}
+    nav a:hover{opacity:.85;}
+
+    main{max-width:1100px;margin-inline:auto;padding:2rem 1rem 4rem;}
+    h1{margin-bottom:2rem;color:var(--clr-accent-dark);}
+
+    /* ─── Project grid ─── */
+    .projects-grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
+    .project-card{background:#fff;border-radius:12px;box-shadow:0 3px 6px rgba(0,0,0,.05);overflow:hidden;display:flex;flex-direction:column;}
+    .project-card__img{aspect-ratio:16/9;background:#e2e8f0;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--clr-muted);}
+    .project-card__body{padding:1.25rem 1.5rem;flex:1;display:flex;flex-direction:column;}
+    .project-card h3{margin-bottom:.5rem;font-size:1.1rem;}
+    .stack{font-size:.875rem;color:var(--clr-muted);margin-bottom:.75rem;}
+    .project-card p{flex:1;}
+    .project-links{margin-top:1rem;display:flex;gap:.75rem;flex-wrap:wrap;}
+    .project-links a{background:var(--clr-accent);color:#fff;padding:.4rem .75rem;border-radius:6px;font-size:.875rem;}
+    .project-links a:hover{opacity:.9;}
+
+    footer{background:var(--clr-text);color:#fff;padding:1rem;text-align:center;font-size:.875rem;}
+  </style>
+</head>
+<body>
+  <!-- ⬆ Encabezado – copiado del index -->
+  <header>
+    <div class="header__inner">
+      <figure>
+        <img src="../assets/img/profile.jpg" alt="Foto de José Ernesto" class="avatar" />
+      </figure>
+      <div>
+        <h1>Proyectos</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="projects.html">Proyectos</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="studies-skills.html">Estudios &amp; Habilidades</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ⬇ Contenido principal -->
   <main>
     <h1>Proyectos destacados</h1>
-    <article class="card">
-      <h3>Ecosistema Escolar (Flask + FastAPI)</h3>
-      <p>Microservicio para gestionar expedientes de mantenimiento y dashboards personalizados.</p>
-      <a href="https://github.com/Ernest-Alf/ecosistema-escolar" target="_blank">Repo →</a>
-    </article>
-    <!-- Más tarjetas -->
+    <div class="projects-grid">
+      <!-- Proyecto 1 -->
+      <article class="project-card">
+        <div class="project-card__img">(screenshot)</div>
+        <div class="project-card__body">
+          <h3>Ecosistema Escolar</h3>
+          <p class="stack">Python · Flask · FastAPI · SQL Server</p>
+          <p>Microservicio para gestionar expedientes de mantenimiento escolar, con autenticación, panel de indicadores y exportación a Excel/Word.</p>
+          <div class="project-links">
+            <a href="https://github.com/Ernest-Alf/ecosistema-escolar" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 2 -->
+      <article class="project-card">
+        <div class="project-card__img">(screenshot)</div>
+        <div class="project-card__body">
+          <h3>SmartLogger</h3>
+          <p class="stack">Python · Logging · CLI</p>
+          <p>Librería de registro de eventos colorida y extensible que facilita depurar proyectos y generar informes de errores.</p>
+          <div class="project-links">
+            <a href="https://github.com/Ernest-Alf/SmartLogger" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 3 -->
+      <article class="project-card">
+        <div class="project-card__img">(screenshot)</div>
+        <div class="project-card__body">
+          <h3>Dashboard Educativo</h3>
+          <p class="stack">Django · Plotly · Pandas</p>
+          <p>Plataforma que visualiza indicadores escolares por zona, escuela y ciclo, permitiendo a gestores tomar decisiones basadas en datos.</p>
+          <div class="project-links">
+            <a href="https://github.com/Ernest-Alf/dashboard-educativo" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
   </main>
-  <!-- footer -->
-</body></html>
+
+  <!-- ⬇ Footer -->
+  <footer>
+    © 2025 José Ernesto Alfaro — Proyectos &amp; código abierto
+  </footer>
+</body>
+</html>
