@@ -2,63 +2,105 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <meta name="description" content="CV de José Ernesto Alfaro — Analista de datos y educador." />
-  <title>José Ernesto Alfaro | CV</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Currículum y portafolio de José Ernesto Alfaro, analista de datos y educador." />
+  <title>José Ernesto Alfaro | Inicio</title>
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- 🎨 Estilos en línea (puedes migrarlos a assets/css/style.css) -->
+  <style>
+    /* ─── Variables & Reset ─────────────────────────────────────────── */
+    :root {
+      --clr-accent: #0ea5e9;
+      --clr-accent-dark: #0d9488;
+      --clr-bg: #f8fafc;
+      --clr-text: #1e293b;
+      --clr-muted: #64748b;
+      --ff-base: 'Inter', sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--ff-base);background:var(--clr-bg);color:var(--clr-text);line-height:1.6;}
+    a{color:var(--clr-accent);text-decoration:none;}
+    img{max-width:100%;display:block;}
+
+    /* ─── Layout ────────────────────────────────────────────────────── */
+    header{background:var(--clr-accent);color:#fff;padding:2rem 1rem;}
+    .header__inner{max-width:1100px;margin-inline:auto;display:flex;flex-direction:column;align-items:center;gap:1.5rem;}
+    @media(min-width:768px){.header__inner{flex-direction:row;justify-content:space-between;}}
+    .avatar{width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid #fff2;}
+
+    nav ul{list-style:none;display:flex;flex-wrap:wrap;gap:1rem 1.5rem;justify-content:center;}
+    nav a{font-weight:600;}
+    nav a:hover{opacity:.85;}
+
+    main{max-width:1100px;margin-inline:auto;padding:2rem 1rem 4rem;}
+    section{margin-bottom:3rem;}
+    h2{color:var(--clr-accent-dark);margin-bottom:1rem;}
+
+    /* Experience cards */
+    .card{background:#fff;border-radius:12px;padding:1.25rem 1.5rem;box-shadow:0 3px 6px rgba(0,0,0,.06);margin-bottom:1rem;}
+    .card h3{margin-bottom:.25rem;font-size:1.1rem;}
+    .card time{font-size:.875rem;color:var(--clr-muted);}
+
+    footer{background:var(--clr-text);color:#fff;padding:1rem;text-align:center;font-size:.875rem;}
+  </style>
 </head>
 <body>
+  <!-- ╭─★ Encabezado ★─╮ -->
   <header>
-    <img src="assets/img/profile.jpg" alt="Foto de José Ernesto" class="avatar" />
-    <h1>José Ernesto Alfaro Méndez</h1>
-    <p>Analista de datos · Educador · Jefe de Evaluación (SEG)</p>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="pages/projects.html">Proyectos</a>
-      <a href="pages/about.html">Sobre mí</a>
-      <a href="pages/contact.html">Contacto</a>
-    </nav>
+    <div class="header__inner">
+      <figure>
+        <img src="assets/img/profile.jpg" alt="Foto de José Ernesto" class="avatar" />
+      </figure>
+      <div>
+        <h1>José Ernesto Alfaro Méndez</h1>
+        <p>Analista de datos · Educador · Jefe de Evaluación</p>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pages/projects.html">Proyectos</a></li>
+            <li><a href="pages/hobbies.html">Hobbies</a></li>
+            <li><a href="pages/studies-skills.html">Estudios &amp; Habilidades</a></li>
+            <li><a href="pages/contact.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
 
+  <!-- ╭─★ Contenido principal ★─╮ -->
   <main>
-    <section id="skills">
-      <h2>Habilidades</h2>
-      <ul>
-        <li>Python · Pandas · VBA</li>
-        <li>Office 365 · Power BI</li>
-        <li>SQL · Git · Linux</li>
-      </ul>
+    <!-- Sobre mí -->
+    <section id="about">
+      <h2>Sobre mí</h2>
+      <p>Soy un profesional apasionado por los datos y la educación con más de 15&nbsp;años de experiencia coordinando evaluaciones e indicadores en la Secretaría de Educación de Guanajuato. Disfruto transformar números en historias que mejoran la toma de decisiones y potencian el aprendizaje.</p>
+      <blockquote style="margin-top:1rem;font-size:1.25rem;font-weight:600;color:var(--clr-accent-dark);border-left:4px solid var(--clr-accent);padding-left:1rem;">
+        «El conocimiento cobra vida cuando los datos encuentran un propósito.»
+      </blockquote>
     </section>
 
+    <!-- Experiencia -->
     <section id="experience">
-      <h2>Experiencia</h2>
-      <article>
+      <h2>Experiencia profesional</h2>
+      <article class="card">
         <h3>Jefe de Planeación y Evaluación — SEG Guanajuato</h3>
-        <time>2007 – presente</time>
-        <p>Gestión de indicadores educativos, coordinación de estudios y encuestas.</p>
+        <time>2007 – Presente</time>
+        <p>Lidero el análisis de más de 250 k registros anuales para identificar brechas de rendimiento y diseñar intervenciones educativas de impacto estatal.</p>
       </article>
-      <article>
+      <article class="card">
         <h3>Docente de educación básica</h3>
         <time>2004 – 2007</time>
-        <p>Docencia en distintos grados y escuelas.</p>
+        <p>Promoví metodologías activas y el uso de tecnología en el aula para mejorar la motivación y los resultados académicos.</p>
       </article>
-    </section>
-
-    <section id="education">
-      <h2>Educación</h2>
-      <ul>
-        <li>Maestría en Administración — U. Centro del Bajío</li>
-        <li>Licenciatura en Educación — UPN</li>
-        <li>Certificaciones y cursos (Udemy, Platzi, etc.)</li>
-      </ul>
     </section>
   </main>
 
+  <!-- ╭─★ Footer ★─╮ -->
   <footer>
-    © 2025 José Ernesto · <a href="pages/contact.html">Contáctame</a>
+    © 2025 José Ernesto Alfaro — Diseñado con ☕ &amp; pasión por los datos
   </footer>
 </body>
 </html>
